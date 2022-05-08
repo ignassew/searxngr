@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html class="no-js theme-auto" lang="en-EN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="SearXNG — a privacy-respecting, hackable metasearch engine">
+    <meta name="keywords" content="SearXNG, search, search engine, metasearch, meta search">
+    <meta name="generator" content="searxng/2022.05.07-6db568bf">
+    <meta name="referrer" content="no-referrer">
+    <meta name="robots" content="noarchive">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <title>SearXNG</title>
+    <link rel="preload" href="./static/themes/simple/img/searxng.png" as="image" />
+    <link rel="stylesheet" href="./static/themes/simple/css/searxng.min.css" type="text/css" media="screen" />
+    <!--[if gte IE 9]>-->
+    <!-- TODO: Update client settings here -->
+    <script src="./static/themes/simple/js/searxng.head.min.js" client_settings="eyJhdXRvY29tcGxldGVfcHJvdmlkZXIiOiAiIiwgImF1dG9jb21wbGV0ZV9taW4iOiA0LCAiaHR0cF9tZXRob2QiOiAiUE9TVCIsICJpbmZpbml0ZV9zY3JvbGwiOiBmYWxzZSwgInRyYW5zbGF0aW9ucyI6IHsibm9faXRlbV9mb3VuZCI6ICJObyBpdGVtIGZvdW5kIiwgIlNvdXJjZSI6ICJTb3VyY2UiLCAiZXJyb3JfbG9hZGluZ19uZXh0X3BhZ2UiOiAiRXJyb3IgbG9hZGluZyB0aGUgbmV4dCBwYWdlIn0sICJzZWFyY2hfb25fY2F0ZWdvcnlfc2VsZWN0IjogdHJ1ZSwgImhvdGtleXMiOiBmYWxzZSwgInRoZW1lX3N0YXRpY19wYXRoIjogIi9zdGF0aWMvdGhlbWVzL3NpbXBsZSJ9"></script>
+    <!--<![endif]-->
+    <script src="./index.js"></script>
+    <link title="SearXNG" type="application/opensearchdescription+xml" rel="search" href="/opensearch.xml?method=POST&amp;autocomplete=" />
+    <link rel="icon" href="./static/themes/simple/img/favicon.png" sizes="any">
+    <link rel="icon" href="./static/themes/simple/img/favicon.svg" type="image/svg+xml">
+</head>
+
+<body class="search_endpoint">
+    <main id="main_index" class="">
+        <nav id="linkto_preferences"><a href="./preferences/preferences.html" aria-label="preferences"><svg class="ion-icon-big" viewBox="0 0 512 512" aria-hidden="true"><path d="M262.29 192.31a64 64 0 1057.4 57.4 64.13 64.13 0 00-57.4-57.4zM416.39 256a154.34 154.34 0 01-1.53 20.79l45.21 35.46a10.81 10.81 0 012.45 13.75l-42.77 74a10.81 10.81 0 01-13.14 4.59l-44.9-18.08a16.11 16.11 0 00-15.17 1.75A164.48 164.48 0 01325 400.8a15.94 15.94 0 00-8.82 12.14l-6.73 47.89a11.08 11.08 0 01-10.68 9.17h-85.54a11.11 11.11 0 01-10.69-8.87l-6.72-47.82a16.07 16.07 0 00-9-12.22 155.3 155.3 0 01-21.46-12.57 16 16 0 00-15.11-1.71l-44.89 18.07a10.81 10.81 0 01-13.14-4.58l-42.77-74a10.8 10.8 0 012.45-13.75l38.21-30a16.05 16.05 0 006-14.08c-.36-4.17-.58-8.33-.58-12.5s.21-8.27.58-12.35a16 16 0 00-6.07-13.94l-38.19-30A10.81 10.81 0 0149.48 186l42.77-74a10.81 10.81 0 0113.14-4.59l44.9 18.08a16.11 16.11 0 0015.17-1.75A164.48 164.48 0 01187 111.2a15.94 15.94 0 008.82-12.14l6.73-47.89A11.08 11.08 0 01213.23 42h85.54a11.11 11.11 0 0110.69 8.87l6.72 47.82a16.07 16.07 0 009 12.22 155.3 155.3 0 0121.46 12.57 16 16 0 0015.11 1.71l44.89-18.07a10.81 10.81 0 0113.14 4.58l42.77 74a10.8 10.8 0 01-2.45 13.75l-38.21 30a16.05 16.05 0 00-6.05 14.08c.33 4.14.55 8.3.55 12.47z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg></a></nav>
+        <div class="index">
+            <div class="title">
+                <h1>SearXNG</h1>
+            </div>
+            <form id="search" method="post" action="/search" role="search">
+                <div id="search_header">
+                    <div id="search_view">
+                        <div class="search_box">
+                            <input id="q" name="q" type="text" placeholder="Search for..." autocomplete="off" autocapitalize="none" spellcheck="false" autocorrect="off" dir="auto" value="">
+                            <input id="preferences" name="preferences" value="" style="display: none;">
+                            <button id="clear_search" type="reset" aria-label="clear"><span class="hide_if_nojs"><svg class="ion-icon-big" viewBox="0 0 512 512" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368"/></svg></span><span class="show_if_nojs">clear</span></button>
+                            <button id="send_search" type="submit" aria-label="search"><span class="hide_if_nojs"><svg class="ion-icon-big" viewBox="0 0 512 512" aria-hidden="true"><path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"/></svg></span><span class="show_if_nojs">search</span></button>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" name="category_general" value="1">
+                <input type="hidden" name="language" value="en-US">
+                <input type="hidden" name="time_range" value="">
+                <input type="hidden" name="safesearch" value="0">
+                <input type="hidden" name="theme" value="simple">
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>
+            Powered by <a href="/info/en/about">searxng</a> - 2022.05.07-6db568bf — a privacy-respecting, hackable metasearch engine<br/>
+            <a href="https://github.com/searxng/searxng">Source code</a> |
+            <a href="https://github.com/searxng/searxng/issues">Issue tracker</a> |
+            <a href="/stats">Engine stats</a> |
+            <a href="https://searx.space">Public instances</a> </p>
+    </footer>
+    <!--[if gte IE 9]>-->
+    <script src="./static/themes/simple/js/searxng.min.js"></script>
+    <!--<![endif]-->
+</body>
+
+</html>
